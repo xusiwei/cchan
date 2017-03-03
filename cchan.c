@@ -185,5 +185,6 @@ chan_t* chan_pickall(chan_t* c)
 	pthread_cond_broadcast(&c->slot_cond);
 
 	pthread_mutex_unlock(&c->mutex);
+	return out;
 }
 #endif // USE_PICK
