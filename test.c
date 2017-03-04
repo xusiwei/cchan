@@ -47,6 +47,7 @@ void* consume(void* args)
 		item = (char*)chan_take(c);
 		sleep(1);
 		INFO("consumed %s ...", item);
+		free(item);
 	}
 	return NULL;
 }
